@@ -13,7 +13,7 @@ export default function Users() {
   }, []);
 
   return (
-    <div className="user-container">
+    <div className="feeds-container">
     {data && data.map((elem) => (
       <div key={elem.id}>
         <div>Id: {elem.id}</div>
