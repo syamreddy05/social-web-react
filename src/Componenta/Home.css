@@ -1,0 +1,40 @@
+.top-nav-container {
+    background-color: #61a1ef;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 10px;
+  }
+  .nav-links a:hover {
+    color: black;
+    
+  }
+  
+  .user-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logout-button {
+    background-color:rgb(207, 232, 241);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  .logout-button:hover{
+    background-color: gray;
+  }
+  .user-text{
+    border-radius: 20px;
+    margin-left: 80px;
+    width: 60px;
+  }
+  

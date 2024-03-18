@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useContext } from "react";
+// import { UserContext } from '../App'
+import { Usecontext1 } from "./UserContext/Usercontext1";
+//import { srikanth } from '../UserContext/Usercontext1';
+import Home from "./Componenta/Home";
+import Login from "./Componenta/Login";
+import Register from "./Componenta/Register";
+//import { IoMdSearch } from "react-icons/io";
+import Feeds from "./Componenta/Feeds";
+import Posts from "./Componenta/Posts";
+import Users from "./Componenta/Users";
+import Todos from "./Componenta/Todos";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Albums from "./Componenta/Albums";
 
-function App() {
+export default function App() {
+  const { flag, setFlag } = useContext(Usecontext1);
+  //const {flag,setFlag} = useContext(srikanth)
+  //const [flag,setFlag] = useState()
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Router>
+      {flag == 0 || flag == 2 ? <Login /> : <Home />}
+      {/* {flag ===0 && <Login/>} */}
+      {/* {flag ===1 && <Home/>} */}
+      {flag === 2 && <Register />}
+
+      
+        
+        <Routes>
+          <Route path="/feeds" index element={<Feeds />}></Route>
+          {/* <Route path="/post" element={<Post />}></Route> */}
+          <Route path="/albums" element={<Albums />}></Route>
+          <Route path="/posts"  element={<Posts />}></Route>
+          <Route path="/users"  element={<Users />}></Route>
+          <Route path="/todos"  element={<Todos />}></Route>
+        </Routes>
+      </Router>
+
+    </>
   );
 }
-
-export default App;
