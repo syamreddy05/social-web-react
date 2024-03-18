@@ -1,11 +1,8 @@
 import React, { useContext } from "react";
-// import { UserContext } from '../App'
 import { Usecontext1 } from "./UserContext/Usercontext1";
-//import { srikanth } from '../UserContext/Usercontext1';
 import Home from "./Componenta/Home";
 import Login from "./Componenta/Login";
 import Register from "./Componenta/Register";
-//import { IoMdSearch } from "react-icons/io";
 import Feeds from "./Componenta/Feeds";
 import Posts from "./Componenta/Posts";
 import Users from "./Componenta/Users";
@@ -29,7 +26,6 @@ export default function App() {
         
         <Routes>
           <Route path="/feeds" index element={<Feeds />}></Route>
-          {/* <Route path="/post" element={<Post />}></Route> */}
           <Route path="/albums" element={<Albums />}></Route>
           <Route path="/posts"  element={<Posts />}></Route>
           <Route path="/users"  element={<Users />}></Route>
