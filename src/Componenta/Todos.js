@@ -2,15 +2,13 @@ import React from 'react'
 import { useEffect,useState } from 'react';
 import { Usecontext1 } from '../UserContext/Usercontext1';
 import { useContext } from 'react';
+import { useFetch } from './useFetch';
 export default function Todos() {
     const {data, setData}= useContext(Usecontext1);
     const url = "https://jsonplaceholder.typicode.com/todos?userId=1";
-  useEffect(() => {
-    fetch(url)
-      .then((response) => response.json())
-      .then((result) => setData(result))
-      .catch((err) => console.log(err));
-  }, []);
+ 
+    useFetch(url)
+      
 
   return (
     

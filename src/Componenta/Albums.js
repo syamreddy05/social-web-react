@@ -3,15 +3,11 @@ import { useEffect,useState } from 'react';
 import { Usecontext1 } from '../UserContext/Usercontext1';
 import { useContext } from 'react';
 import './Feeds.css';
+import { useFetch } from './useFetch';
 export default function Albums() {
     const {data, setData}= useContext(Usecontext1);
     const url = "https://jsonplaceholder.typicode.com/albums?userId=1";
-  useEffect(() => {
-    fetch(url)
-      .then((response) => response.json())
-      .then((result) => setData(result))
-      .catch((err) => console.log(err));
-  }, []);
+ useFetch(url);
 
   return (
     <div className="feeds-container">

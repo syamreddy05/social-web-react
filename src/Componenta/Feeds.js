@@ -4,16 +4,13 @@ import { Usecontext1 } from '../UserContext/Usercontext1';
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import  './Feeds.css';
+import { useFetch } from './useFetch';
+import Comments from './Comments';
 export default function Feeds() {
     const {data, setData,count,setCount}= useContext(Usecontext1);
 
     const url = "https://jsonplaceholder.typicode.com/posts";
-  useEffect(() => {
-    fetch(url)
-      .then((response) => response.json())
-      .then((result) => setData(result))
-      .catch((err) => console.log(err));
-  }, []);
+    useFetch(url);
 
   return (
     
@@ -25,8 +22,8 @@ export default function Feeds() {
         <div>UserId: {elem.userId}</div>
         <div>Title: {elem.title}</div>
         <div>Body: {elem.body}</div>
-        <div onClick={()=>setCount()}>
-          <Link to="/Comments">
+        <div onClick={()=>setCount(elem.id)}>
+          <Link to="/comments">
         <button>Go to Comments</button>
         </Link>
         </div><br></br>

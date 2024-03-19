@@ -7,6 +7,7 @@ import Feeds from "./Componenta/Feeds";
 import Posts from "./Componenta/Posts";
 import Users from "./Componenta/Users";
 import Todos from "./Componenta/Todos";
+import Comments from "./Componenta/Comments";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Albums from "./Componenta/Albums";
 
@@ -25,7 +26,8 @@ export default function App() {
       
         
         <Routes>
-          <Route index path="/"  element={<Feeds />}></Route>
+          <Route index path="/feeds"  element={<Feeds />}></Route>
+          <Route path="/comments"  element={<Comments />}></Route>
           <Route path="/albums" element={<Albums />}></Route>
           <Route path="/posts"  element={<Posts />}></Route>
           <Route path="/users"  element={<Users />}></Route>
