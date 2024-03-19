@@ -18,7 +18,7 @@ export default function Posts() {
         <div>Body: {elem.body}</div>
         <div onClick={()=>setCount(elem.id)}>
           <Link to="/comments">
-        <button>Go to Comments</button>
+        <button>View Comments</button>
         </Link>
         </div><hr></hr>
       </div>
