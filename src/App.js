@@ -25,7 +25,7 @@ export default function App() {
       
         
         <Routes>
-          <Route path="/feeds" index element={<Feeds />}></Route>
+          <Route index path="/"  element={<Feeds />}></Route>
           <Route path="/albums" element={<Albums />}></Route>
           <Route path="/posts"  element={<Posts />}></Route>
           <Route path="/users"  element={<Users />}></Route>

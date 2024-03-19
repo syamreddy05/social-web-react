@@ -18,8 +18,10 @@ export default function Feeds() {
   return (
     
     <div className="feeds-container">
+      <div><h1>[All Feeds]</h1></div>
     {data && data.map((elem) => (
       <div key={elem.id}>
+        
         <div>UserId: {elem.userId}</div>
         <div>Title: {elem.title}</div>
         <div>Body: {elem.body}</div>

@@ -5,7 +5,7 @@ import { useContext } from 'react';
 import './Feeds.css';
 export default function Albums() {
     const {data, setData}= useContext(Usecontext1);
-    const url = "https://jsonplaceholder.typicode.com/albums";
+    const url = "https://jsonplaceholder.typicode.com/albums?userId=1";
   useEffect(() => {
     fetch(url)
       .then((response) => response.json())
@@ -19,7 +19,7 @@ export default function Albums() {
       <div key={elem.id}>
         <div>UserId: {elem.userId}</div>
         <div>Id: {elem.id}</div>
-        <div>Title: {elem.title}</div><br></br>
+        <div>Title: {elem.title}</div><hr></hr>
         
       </div>
     ))}

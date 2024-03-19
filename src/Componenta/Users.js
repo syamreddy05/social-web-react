@@ -4,7 +4,7 @@ import { Usecontext1 } from '../UserContext/Usercontext1';
 import { useContext } from 'react';
 export default function Users() {
     const {data, setData}= useContext(Usecontext1);
-    const url = "https://jsonplaceholder.typicode.com/users";
+    const url = "https://jsonplaceholder.typicode.com/users?userId=1";
   useEffect(() => {
     fetch(url)
       .then((response) => response.json())
@@ -22,7 +22,7 @@ export default function Users() {
         <div>Email: {elem.email}</div>
         <div>Phone: {elem.phone}</div>
         <div>Website: {elem.website}</div>
-        <br></br>
+        <hr></hr>
         
         
       </div>

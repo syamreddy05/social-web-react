@@ -4,7 +4,7 @@ import { Usecontext1 } from '../UserContext/Usercontext1';
 import { useContext } from 'react';
 export default function Posts() {
     const {data, setData}= useContext(Usecontext1);
-    const url = "https://jsonplaceholder.typicode.com/posts";
+    const url = "https://jsonplaceholder.typicode.com/posts?userId=1";
   useEffect(() => {
     fetch(url)
       .then((response) => response.json())
@@ -20,7 +20,7 @@ export default function Posts() {
         <div>UserId: {elem.userId}</div>
         <div>Title: {elem.title}</div>
         <div>Body: {elem.body}</div>
-        <button>Go to Comments</button>
+        <button>Go to Comments</button><hr></hr>
       </div>
     ))}
   </div>
