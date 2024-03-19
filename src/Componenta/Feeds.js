@@ -24,7 +24,7 @@ export default function Feeds() {
         <div>Body: {elem.body}</div>
         <div onClick={()=>setCount(elem.id)}>
           <Link to="/comments">
-        <button>Go to Comments</button>
+        <button>View Comments</button>
         </Link>
         </div><br></br>
       </div>
